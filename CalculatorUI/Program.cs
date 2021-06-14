@@ -13,13 +13,8 @@ namespace CalculatorUI
         [STAThread]
         static void Main()
         {
-            // DI container
-            IUnityContainer container = new UnityContainer();
-            container.RegisterType<ICalculatorLogic, DefaultImplementation>();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm(container.Resolve<ICalculatorLogic>()));
         }
     }
 }

@@ -6,18 +6,33 @@ namespace CalculatorUI
 {
     public partial class MainForm : Form
     {
-        private readonly ICalculatorLogic calculator;
+        MathematicalOperationBase currentOperation = null;
 
-        public MainForm(ICalculatorLogic calculatorLogic)
+        private float lhs_operant = 0.0f, rhs_operant = 0.0f, result = 0.0f;
+
+        public MainForm()
         {
             InitializeComponent();
+        }
 
-            calculator = calculatorLogic;
+        private void btnEqualSign_Click(object sender, EventArgs e)
+        {
+            if (lhs_operant == 0.0f || rhs_operant == 0.0f || currentOperation == null)
+            {
+                return;
+            }
+
+            result = currentOperation.CalculateResult(lhs_operant, rhs_operant);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            float result = calculator.Add(1, 2);
+            currentOperation = new OperationAddition();
+        }
+
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            currentOperation = new OperationSubtraction();
         }
     }
 }
