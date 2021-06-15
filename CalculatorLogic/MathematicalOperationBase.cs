@@ -1,6 +1,4 @@
-﻿using Unity;
-
-namespace CalculatorLogic
+﻿namespace CalculatorLogic
 {
     public abstract class MathematicalOperationBase
     {

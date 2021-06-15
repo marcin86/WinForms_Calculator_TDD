@@ -13,8 +13,15 @@ namespace CalculatorUI
         [STAThread]
         static void Main()
         {
+            // Correct way to use DI container
+            // https://www.devtrends.co.uk/blog/how-not-to-do-dependency-injection-the-static-or-singleton-container
+            IUnityContainer container = new UnityContainer();
+            container.RegisterType<ICalculatorLogic, DefaultImplementation>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Application.Run(container.Resolve<MainForm>());
         }
     }
 }

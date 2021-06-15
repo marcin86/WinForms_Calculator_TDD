@@ -2,7 +2,7 @@
 {
     public class OperationAddition : MathematicalOperationBase
     {
-        public OperationAddition(): base(new DefaultImplementation())
+        public OperationAddition(ICalculatorLogic logic): base(logic)
         {
 
         }
