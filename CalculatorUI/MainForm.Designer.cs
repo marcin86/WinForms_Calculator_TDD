@@ -47,6 +47,7 @@ namespace CalculatorUI
             this.btn_0 = new System.Windows.Forms.Button();
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.btnComma = new System.Windows.Forms.Button();
+            this.txtHistory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -200,11 +201,20 @@ namespace CalculatorUI
             this.btnComma.UseVisualStyleBackColor = true;
             this.btnComma.Click += new System.EventHandler(this.numericButton_Click);
             // 
+            // txtHistory
+            // 
+            this.txtHistory.Location = new System.Drawing.Point(132, 12);
+            this.txtHistory.Multiline = true;
+            this.txtHistory.Name = "txtHistory";
+            this.txtHistory.Size = new System.Drawing.Size(170, 139);
+            this.txtHistory.TabIndex = 15;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 164);
+            this.ClientSize = new System.Drawing.Size(311, 162);
+            this.Controls.Add(this.txtHistory);
             this.Controls.Add(this.btnComma);
             this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.btn_0);
@@ -245,6 +255,7 @@ namespace CalculatorUI
         private System.Windows.Forms.Button btn_0;
         private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Button btnComma;
+        private System.Windows.Forms.TextBox txtHistory;
     }
 }
 
