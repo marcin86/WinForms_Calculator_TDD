@@ -2,11 +2,11 @@
 {
     public interface IRegexOperations
     {
-        bool IsLhsOperantPresent(string source);
-        bool AreBothOperantsPresent(string source);
-        bool IsTheLastSymbolAnOperationSymbol(string source);
+        bool IsLhsOperantPresent(string source, string pattern);
+        bool AreBothOperantsPresent(string source, string pattern);
+        bool IsTheLastSymbolAnOperationSymbol(string source, string pattern);
 
-        float TakeLhsOperantValue(string source);
-        float TakeLastOperantValue(string source);
+        float TakeLhsOperantValue(string source, string pattern);
+        float TakeLastOperantValue(string source, string pattern);
     }
 }
