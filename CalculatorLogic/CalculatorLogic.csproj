@@ -53,12 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultImplementation.cs" />
-    <Compile Include="ICalculatorLogic.cs" />
-    <Compile Include="MathematicalOperationBase.cs" />
-    <Compile Include="OperationAddition.cs" />
-    <Compile Include="OperationSubtraction.cs" />
+    <Compile Include="Logic\DefaultImplementation.cs" />
+    <Compile Include="Logic\ICalculatorLogic.cs" />
+    <Compile Include="Operations\MathematicalOperationBase.cs" />
+    <Compile Include="Operations\OperationAddition.cs" />
+    <Compile Include="Operations\OperationSubtraction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexAnalyzer\IRegexOperations.cs" />
+    <Compile Include="RegexAnalyzer\RegexImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

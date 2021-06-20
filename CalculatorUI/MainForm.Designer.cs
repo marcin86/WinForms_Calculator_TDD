@@ -47,12 +47,11 @@ namespace CalculatorUI
             this.btn_0 = new System.Windows.Forms.Button();
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.btnComma = new System.Windows.Forms.Button();
-            this.txtHistory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(94, 38);
+            this.btnAdd.Location = new System.Drawing.Point(119, 149);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(32, 32);
@@ -63,7 +62,7 @@ namespace CalculatorUI
             // 
             // btnSubtract
             // 
-            this.btnSubtract.Location = new System.Drawing.Point(94, 74);
+            this.btnSubtract.Location = new System.Drawing.Point(119, 185);
             this.btnSubtract.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(32, 32);
@@ -74,7 +73,7 @@ namespace CalculatorUI
             // 
             // btnEqualSign
             // 
-            this.btnEqualSign.Location = new System.Drawing.Point(94, 110);
+            this.btnEqualSign.Location = new System.Drawing.Point(119, 221);
             this.btnEqualSign.Margin = new System.Windows.Forms.Padding(2);
             this.btnEqualSign.Name = "btnEqualSign";
             this.btnEqualSign.Size = new System.Drawing.Size(32, 32);
@@ -85,7 +84,7 @@ namespace CalculatorUI
             // 
             // btn_1
             // 
-            this.btn_1.Location = new System.Drawing.Point(12, 97);
+            this.btn_1.Location = new System.Drawing.Point(12, 208);
             this.btn_1.Margin = new System.Windows.Forms.Padding(2);
             this.btn_1.Name = "btn_1";
             this.btn_1.Size = new System.Drawing.Size(22, 24);
@@ -96,7 +95,7 @@ namespace CalculatorUI
             // 
             // btn_2
             // 
-            this.btn_2.Location = new System.Drawing.Point(39, 97);
+            this.btn_2.Location = new System.Drawing.Point(39, 208);
             this.btn_2.Name = "btn_2";
             this.btn_2.Size = new System.Drawing.Size(22, 24);
             this.btn_2.TabIndex = 4;
@@ -106,7 +105,7 @@ namespace CalculatorUI
             // 
             // btn_3
             // 
-            this.btn_3.Location = new System.Drawing.Point(67, 97);
+            this.btn_3.Location = new System.Drawing.Point(67, 208);
             this.btn_3.Name = "btn_3";
             this.btn_3.Size = new System.Drawing.Size(22, 24);
             this.btn_3.TabIndex = 5;
@@ -116,7 +115,7 @@ namespace CalculatorUI
             // 
             // btn_4
             // 
-            this.btn_4.Location = new System.Drawing.Point(12, 68);
+            this.btn_4.Location = new System.Drawing.Point(12, 179);
             this.btn_4.Name = "btn_4";
             this.btn_4.Size = new System.Drawing.Size(22, 24);
             this.btn_4.TabIndex = 6;
@@ -126,7 +125,7 @@ namespace CalculatorUI
             // 
             // btn_5
             // 
-            this.btn_5.Location = new System.Drawing.Point(39, 68);
+            this.btn_5.Location = new System.Drawing.Point(39, 179);
             this.btn_5.Name = "btn_5";
             this.btn_5.Size = new System.Drawing.Size(22, 24);
             this.btn_5.TabIndex = 7;
@@ -136,7 +135,7 @@ namespace CalculatorUI
             // 
             // btn_8
             // 
-            this.btn_8.Location = new System.Drawing.Point(39, 38);
+            this.btn_8.Location = new System.Drawing.Point(39, 149);
             this.btn_8.Name = "btn_8";
             this.btn_8.Size = new System.Drawing.Size(22, 24);
             this.btn_8.TabIndex = 8;
@@ -146,7 +145,7 @@ namespace CalculatorUI
             // 
             // btn_9
             // 
-            this.btn_9.Location = new System.Drawing.Point(67, 38);
+            this.btn_9.Location = new System.Drawing.Point(67, 149);
             this.btn_9.Name = "btn_9";
             this.btn_9.Size = new System.Drawing.Size(22, 24);
             this.btn_9.TabIndex = 9;
@@ -156,7 +155,7 @@ namespace CalculatorUI
             // 
             // btn_6
             // 
-            this.btn_6.Location = new System.Drawing.Point(67, 67);
+            this.btn_6.Location = new System.Drawing.Point(67, 178);
             this.btn_6.Name = "btn_6";
             this.btn_6.Size = new System.Drawing.Size(22, 24);
             this.btn_6.TabIndex = 10;
@@ -166,7 +165,7 @@ namespace CalculatorUI
             // 
             // btn_7
             // 
-            this.btn_7.Location = new System.Drawing.Point(12, 38);
+            this.btn_7.Location = new System.Drawing.Point(12, 149);
             this.btn_7.Name = "btn_7";
             this.btn_7.Size = new System.Drawing.Size(22, 24);
             this.btn_7.TabIndex = 11;
@@ -176,7 +175,7 @@ namespace CalculatorUI
             // 
             // btn_0
             // 
-            this.btn_0.Location = new System.Drawing.Point(67, 127);
+            this.btn_0.Location = new System.Drawing.Point(67, 238);
             this.btn_0.Name = "btn_0";
             this.btn_0.Size = new System.Drawing.Size(22, 24);
             this.btn_0.TabIndex = 12;
@@ -187,13 +186,14 @@ namespace CalculatorUI
             // txtDisplay
             // 
             this.txtDisplay.Location = new System.Drawing.Point(12, 12);
+            this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(114, 20);
+            this.txtDisplay.Size = new System.Drawing.Size(236, 131);
             this.txtDisplay.TabIndex = 13;
             // 
             // btnComma
             // 
-            this.btnComma.Location = new System.Drawing.Point(39, 127);
+            this.btnComma.Location = new System.Drawing.Point(39, 238);
             this.btnComma.Name = "btnComma";
             this.btnComma.Size = new System.Drawing.Size(22, 24);
             this.btnComma.TabIndex = 14;
@@ -201,20 +201,11 @@ namespace CalculatorUI
             this.btnComma.UseVisualStyleBackColor = true;
             this.btnComma.Click += new System.EventHandler(this.numericButton_Click);
             // 
-            // txtHistory
-            // 
-            this.txtHistory.Location = new System.Drawing.Point(132, 12);
-            this.txtHistory.Multiline = true;
-            this.txtHistory.Name = "txtHistory";
-            this.txtHistory.Size = new System.Drawing.Size(170, 139);
-            this.txtHistory.TabIndex = 15;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 162);
-            this.Controls.Add(this.txtHistory);
+            this.ClientSize = new System.Drawing.Size(260, 273);
             this.Controls.Add(this.btnComma);
             this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.btn_0);
@@ -255,7 +246,6 @@ namespace CalculatorUI
         private System.Windows.Forms.Button btn_0;
         private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Button btnComma;
-        private System.Windows.Forms.TextBox txtHistory;
     }
 }
 

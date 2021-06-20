@@ -1,12 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using CalculatorLogic.Logic;
 
-namespace CalculatorLogicTests
+namespace CalculatorLogicTests.OperationsTests
 {
     [TestClass]
     public class SubtractTests
     {
-        CalculatorLogic.ICalculatorLogic defaultImplementation = new CalculatorLogic.DefaultImplementation();
+        private ICalculatorLogic defaultImplementation = new DefaultImplementation();
 
         [TestMethod]
         public void RemoveSmallerFromBigger_CorrectResult()

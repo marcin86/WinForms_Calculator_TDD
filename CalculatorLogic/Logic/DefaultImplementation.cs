@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CalculatorLogic
+namespace CalculatorLogic.Logic
 {
     public class DefaultImplementation : ICalculatorLogic
     {

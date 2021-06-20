@@ -1,4 +1,4 @@
-﻿namespace CalculatorLogic
+﻿namespace CalculatorLogic.Logic
 {
     public interface ICalculatorLogic
     {

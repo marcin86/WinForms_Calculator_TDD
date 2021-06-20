@@ -1,12 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CalculatorLogic.Logic;
 using System;
 
-namespace CalculatorLogicTests
+namespace CalculatorLogicTests.OperationsTests
 {
     [TestClass]
     public class AddTests
     {
-        CalculatorLogic.ICalculatorLogic defaultImplementation = new CalculatorLogic.DefaultImplementation();
+        private ICalculatorLogic defaultImplementation = new DefaultImplementation();
 
         [TestMethod]
         public void AddTwoPositiveCorrectValues_CorrectResult()

@@ -1,4 +1,5 @@
-﻿using CalculatorLogic;
+﻿using CalculatorLogic.Logic;
+using CalculatorLogic.RegexAnalyzer;
 using System;
 using System.Windows.Forms;
 using Unity;
@@ -17,6 +18,7 @@ namespace CalculatorUI
             // https://www.devtrends.co.uk/blog/how-not-to-do-dependency-injection-the-static-or-singleton-container
             IUnityContainer container = new UnityContainer();
             container.RegisterType<ICalculatorLogic, DefaultImplementation>();
+            container.RegisterType<IRegexOperations, RegexImplementation>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -1,4 +1,6 @@
-﻿namespace CalculatorLogic
+﻿using CalculatorLogic.Logic;
+
+namespace CalculatorLogic.Operations
 {
     public class OperationSubtraction : MathematicalOperationBase
     {
