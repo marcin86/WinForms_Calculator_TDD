@@ -53,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OperationsTests\SubtractTests.cs" />
     <Compile Include="RegexTests\IsLhsOperantPresentTests.cs" />
+    <Compile Include="RegexTests\AreBothOperantsPresentTests.cs" />
+    <Compile Include="RegexTests\IsTheLastSymbolAnOperationSymbolTests.cs" />
+    <Compile Include="RegexTests\TakeLhsOperantValueTests.cs" />
+    <Compile Include="RegexTests\TakeLastOperantValueTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,22 +11,43 @@ namespace CalculatorLogic.RegexAnalyzer
 
         public bool AreBothOperantsPresent(string source, string pattern)
         {
-            throw new System.NotImplementedException();
+            return CheckCommonFunctionality(source, pattern);
         }
 
         public bool IsTheLastSymbolAnOperationSymbol(string source, string pattern)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public float TakeLastOperantValue(string source, string pattern)
-        {
-            throw new System.NotImplementedException();
+            return CheckCommonFunctionality(source, pattern);
         }
 
         public float TakeLhsOperantValue(string source, string pattern)
         {
-            throw new System.NotImplementedException();
+            float result = float.NaN;
+            GroupCollection groups = TakeCommonFunctionality(source, pattern);
+            bool parseResult = float.TryParse(groups[0].Value, out result);
+
+            if (true == parseResult)
+            {
+                return result;
+            }
+
+            return float.NaN;
+        }
+
+        public float TakeLastOperantValue(string source, string pattern)
+        {
+            float result = float.NaN;
+
+            GroupCollection groups = TakeCommonFunctionality(source, pattern);
+            bool parseResult = float.TryParse(groups[2].Value, out result);
+
+            if (true == parseResult)
+            {
+                return result;
+            }
+            else
+            {
+                return float.NaN;
+            }
         }
 
         private bool CheckCommonFunctionality(string source, string pattern)
