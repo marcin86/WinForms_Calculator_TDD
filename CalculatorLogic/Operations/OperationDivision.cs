@@ -2,15 +2,15 @@
 
 namespace CalculatorLogic.Operations
 {
-    public class OperationAddition : MathematicalOperationBase
+    public class OperationDivision : MathematicalOperationBase
     {
-        public OperationAddition(ICalculatorLogic logic): base(logic)
+        public OperationDivision(ICalculatorLogic logic) : base(logic)
         {
         }
 
         public override float CalculateResult(float lhs, float rhs)
         {
-            return calculatorLogic.Add(lhs, rhs);
+            return calculatorLogic.Divide(lhs, rhs);
         }
     }
 }

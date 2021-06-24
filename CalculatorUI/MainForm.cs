@@ -26,19 +26,57 @@ namespace CalculatorUI
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            currentOperation = new OperationAddition(logic);
-        }
-
         private void numericButton_Click(object sender, EventArgs e)
         {
             txtDisplay.Text += ((Button)sender).Text;
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string symbol = ((Button)sender).Text;
+            MathematicalOperationBase operation = new OperationAddition(logic);
+
+            CommonOperationButtonsFunctionality(operation, symbol);
+        }
+
         private void btnSubtract_Click(object sender, EventArgs e)
         {
-            currentOperation = new OperationSubtraction(logic);
+            string symbol = ((Button)sender).Text;
+            MathematicalOperationBase operation = new OperationSubtraction(logic);
+
+            CommonOperationButtonsFunctionality(operation, symbol);
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            string symbol = ((Button)sender).Text;
+            MathematicalOperationBase operation = new OperationMultiplication(logic);
+
+            CommonOperationButtonsFunctionality(operation, symbol);
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            string symbol = ((Button)sender).Text;
+            MathematicalOperationBase operation = new OperationDivision(logic);
+
+            CommonOperationButtonsFunctionality(operation, symbol);
+        }
+
+        private void CommonOperationButtonsFunctionality(MathematicalOperationBase operation, string symbol)
+        {
+            if (regex.IsLhsOperantPresent(txtDisplay.Text))
+            {
+                lhs_operant = float.Parse(txtDisplay.Text);
+
+                currentOperation = operation;
+                txtDisplay.Text += $" {symbol} ";
+            }
+            else if (regex.AreBothOperantsPresent(txtDisplay.Text))
+            {
+                rhs_operant = regex.TakeLastOperantValue(txtDisplay.Text);
+                btnEqualSign_Click(null, EventArgs.Empty);
+            }
         }
     }
 }

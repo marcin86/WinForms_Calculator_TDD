@@ -25,5 +25,15 @@ namespace CalculatorLogic.Logic
 
             return lhs - rhs;
         }
+
+        public float Divide(float lhs, float rhs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public float Multiply(float lhs, float rhs)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

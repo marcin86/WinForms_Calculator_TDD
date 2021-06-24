@@ -47,14 +47,16 @@ namespace CalculatorUI
             this.btn_0 = new System.Windows.Forms.Button();
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.btnComma = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.btnDivide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(119, 149);
+            this.btnAdd.Location = new System.Drawing.Point(113, 149);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnAdd.Size = new System.Drawing.Size(35, 35);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -62,10 +64,10 @@ namespace CalculatorUI
             // 
             // btnSubtract
             // 
-            this.btnSubtract.Location = new System.Drawing.Point(119, 185);
+            this.btnSubtract.Location = new System.Drawing.Point(113, 188);
             this.btnSubtract.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubtract.Name = "btnSubtract";
-            this.btnSubtract.Size = new System.Drawing.Size(32, 32);
+            this.btnSubtract.Size = new System.Drawing.Size(35, 35);
             this.btnSubtract.TabIndex = 1;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
@@ -73,10 +75,10 @@ namespace CalculatorUI
             // 
             // btnEqualSign
             // 
-            this.btnEqualSign.Location = new System.Drawing.Point(119, 221);
+            this.btnEqualSign.Location = new System.Drawing.Point(113, 227);
             this.btnEqualSign.Margin = new System.Windows.Forms.Padding(2);
             this.btnEqualSign.Name = "btnEqualSign";
-            this.btnEqualSign.Size = new System.Drawing.Size(32, 32);
+            this.btnEqualSign.Size = new System.Drawing.Size(35, 35);
             this.btnEqualSign.TabIndex = 2;
             this.btnEqualSign.Text = "=";
             this.btnEqualSign.UseVisualStyleBackColor = true;
@@ -188,7 +190,7 @@ namespace CalculatorUI
             this.txtDisplay.Location = new System.Drawing.Point(12, 12);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(236, 131);
+            this.txtDisplay.Size = new System.Drawing.Size(176, 131);
             this.txtDisplay.TabIndex = 13;
             // 
             // btnComma
@@ -197,15 +199,37 @@ namespace CalculatorUI
             this.btnComma.Name = "btnComma";
             this.btnComma.Size = new System.Drawing.Size(22, 24);
             this.btnComma.TabIndex = 14;
-            this.btnComma.Text = ",";
+            this.btnComma.Text = ".";
             this.btnComma.UseVisualStyleBackColor = true;
             this.btnComma.Click += new System.EventHandler(this.numericButton_Click);
+            // 
+            // btnMultiply
+            // 
+            this.btnMultiply.Location = new System.Drawing.Point(153, 149);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(35, 35);
+            this.btnMultiply.TabIndex = 15;
+            this.btnMultiply.Text = "*";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            // 
+            // btnDivide
+            // 
+            this.btnDivide.Location = new System.Drawing.Point(153, 188);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(35, 35);
+            this.btnDivide.TabIndex = 16;
+            this.btnDivide.Text = "/";
+            this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 273);
+            this.ClientSize = new System.Drawing.Size(200, 273);
+            this.Controls.Add(this.btnDivide);
+            this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnComma);
             this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.btn_0);
@@ -246,6 +270,8 @@ namespace CalculatorUI
         private System.Windows.Forms.Button btn_0;
         private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Button btnComma;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.Button btnDivide;
     }
 }
 

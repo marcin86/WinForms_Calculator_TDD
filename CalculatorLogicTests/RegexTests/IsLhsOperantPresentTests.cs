@@ -6,7 +6,7 @@ namespace CalculatorLogicTests.RegexTests
     [TestClass]
     public class IsLhsOperantPresentTests
     {
-        private const string pattern = @"^[+-]?([0-9]*[.])?[0-9]+$";
+        private const string pattern = @"^[+-]?([0-9]*[.]?[0-9]{1,})$";
         private IRegexOperations regex = null;
 
         [TestInitialize]
