@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OperationsTests\AddTests.cs" />
+    <Compile Include="OperationsTests\DivideTests.cs" />
+    <Compile Include="OperationsTests\MultiplyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OperationsTests\SubtractTests.cs" />
     <Compile Include="RegexTests\IsLhsOperantPresentTests.cs" />

@@ -28,12 +28,31 @@ namespace CalculatorLogic.Logic
 
         public float Divide(float lhs, float rhs)
         {
-            throw new NotImplementedException();
+            if (0 == rhs)
+            {
+                throw new DivideByZeroException();
+            }
+
+            if ((Math.Round((lhs / rhs)) > float.MaxValue))
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            float result = (float)Math.Round((lhs / rhs), 3);
+
+            return result;
         }
 
         public float Multiply(float lhs, float rhs)
         {
-            throw new NotImplementedException();
+            if ((Math.Round((lhs * rhs)) > float.MaxValue))
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            float result = (float)Math.Round((lhs * rhs), 3);
+
+            return result;
         }
     }
 }
