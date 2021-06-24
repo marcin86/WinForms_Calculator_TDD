@@ -23,7 +23,20 @@ namespace CalculatorUI
 
         private void btnEqualSign_Click(object sender, EventArgs e)
         {
+            string last_line = txtDisplay.Lines[txtDisplay.Lines.Length - 1];
 
+            if (regex.AreBothOperantsPresent(last_line))
+            {
+                rhs_operant = regex.TakeLastOperantValue(last_line);
+
+                float result = currentOperation.CalculateResult(lhs_operant, rhs_operant);
+
+                lhs_operant = result;
+                rhs_operant = float.NaN;
+                currentOperation = null;
+
+                txtDisplay.Text += $" = {result}{Environment.NewLine}{lhs_operant}";
+            }
         }
 
         private void numericButton_Click(object sender, EventArgs e)
@@ -65,16 +78,18 @@ namespace CalculatorUI
 
         private void CommonOperationButtonsFunctionality(MathematicalOperationBase operation, string symbol)
         {
-            if (regex.IsLhsOperantPresent(txtDisplay.Text))
+            string last_line = txtDisplay.Lines[txtDisplay.Lines.Length - 1];
+
+            if (regex.IsLhsOperantPresent(last_line))
             {
-                lhs_operant = float.Parse(txtDisplay.Text);
+                lhs_operant = float.Parse(last_line);
 
                 currentOperation = operation;
                 txtDisplay.Text += $" {symbol} ";
             }
-            else if (regex.AreBothOperantsPresent(txtDisplay.Text))
+            else if (regex.AreBothOperantsPresent(last_line))
             {
-                rhs_operant = regex.TakeLastOperantValue(txtDisplay.Text);
+                rhs_operant = regex.TakeLastOperantValue(last_line);
                 btnEqualSign_Click(null, EventArgs.Empty);
             }
         }

@@ -190,6 +190,7 @@ namespace CalculatorUI
             this.txtDisplay.Location = new System.Drawing.Point(12, 12);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDisplay.Size = new System.Drawing.Size(176, 131);
             this.txtDisplay.TabIndex = 13;
             // 
@@ -245,6 +246,7 @@ namespace CalculatorUI
             this.Controls.Add(this.btnEqualSign);
             this.Controls.Add(this.btnSubtract);
             this.Controls.Add(this.btnAdd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Calculator";
